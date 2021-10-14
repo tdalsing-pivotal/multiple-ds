@@ -1,0 +1,33 @@
+plugins {
+    id "java"
+    id 'org.springframework.boot' version '2.5.5'
+}
+
+repositories {
+    mavenCentral()
+}
+
+group = "com.vmware"
+version = "0.0.1-SNAPSHOT"
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc:2.5.5'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.5'
+
+    implementation 'org.postgresql:postgresql:42.2.24'
+
+    compileOnly "org.projectlombok:lombok:1.18.22"
+    annotationProcessor "org.projectlombok:lombok:1.18.22"
+}
+

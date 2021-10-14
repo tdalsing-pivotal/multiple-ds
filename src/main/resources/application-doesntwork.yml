@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgresql:primary_db
+  secondary-datasource:
+    jdbc-url: jdbc:postgresql:secondary_db
